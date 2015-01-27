@@ -102,8 +102,11 @@ Vector3 Vector3::GetNormalize()
 //////////////////////////////////////////////////////////////////
 //IMPLEMENT REFLECTION FUNCTION
 //////////////////////////////////////////////////////////////////
-/*
+
 Vector3 Vector3::GetReflected(Vector3 a_vNormal)
 {
+	a_vNormal.Normalize();
+	Vector3 p = a_vNormal *(-this->Dot(a_vNormal));
+	return (p * 2) + (*this);
 }
-*/
+
